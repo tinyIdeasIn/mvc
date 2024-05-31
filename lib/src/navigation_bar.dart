@@ -56,7 +56,8 @@ class NavBar extends StatefulWidget implements PreferredSizeWidget {
     this.titleSpacing = NavigationToolbar.kMiddleSpacing,
     this.toolbarOpacity = 1.0,
     this.bottomOpacity = 1.0,
-  })  : assert(elevation == null || elevation >= 0.0),
+  })
+      : assert(elevation == null || elevation >= 0.0),
         preferredSize = Size.fromHeight(
             kToolbarHeight + (bottom?.preferredSize.height ?? 0.0)),
         super(key: key);
@@ -261,9 +262,9 @@ class _NavigationBarState extends State<NavBar> {
         parentRoute is PageRoute<dynamic> && parentRoute.fullscreenDialog;
 
     IconThemeData overallIconTheme =
-        const IconThemeData(color: Colors.black, opacity: 1, size: 16);
+    const IconThemeData(color: Colors.black, opacity: 1, size: 16);
     IconThemeData actionsIconTheme =
-        const IconThemeData(color: Colors.black, opacity: 1, size: 16);
+    const IconThemeData(color: Colors.black, opacity: 1, size: 16);
     TextStyle centerStyle =
         widget.style ?? const TextStyle(color: Colors.black, fontSize: 18);
     TextStyle sideStyle =
@@ -271,8 +272,8 @@ class _NavigationBarState extends State<NavBar> {
 
     if (widget.toolbarOpacity != 1.0) {
       final double opacity =
-          const Interval(0.25, 1.0, curve: Curves.fastOutSlowIn)
-              .transform(widget.toolbarOpacity);
+      const Interval(0.25, 1.0, curve: Curves.fastOutSlowIn)
+          .transform(widget.toolbarOpacity);
       if (centerStyle.color != null) {
         centerStyle = centerStyle.copyWith(
             color: centerStyle.color!.withOpacity(opacity));
@@ -293,26 +294,28 @@ class _NavigationBarState extends State<NavBar> {
         leading = IconButton(
           icon: const Icon(Icons.menu),
           onPressed: _handleDrawerButton,
-          tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          tooltip: MaterialLocalizations
+              .of(context)
+              .openAppDrawerTooltip,
         );
       } else {
         if (canPop) {
           leading = useCloseButton
               ? const CloseButton()
               : IconButton(
-                  icon: const ImageIcon(
-                    AssetImage("assets/icon_arrow_left.png", package: 'ad_mvc'),
-                    color: Colors.black87,
-                    size: 20,
-                  ),
-                  onPressed: () {
-                    if (widget.onBackTap != null) {
-                      widget.onBackTap!();
-                    } else {
-                      Navigator.maybePop(context);
-                    }
-                  },
-                );
+            icon: const ImageIcon(
+              AssetImage("assets/icon_arrow_left.png", package: 'flutter_mvc'),
+              color: Colors.black87,
+              size: 20,
+            ),
+            onPressed: () {
+              if (widget.onBackTap != null) {
+                widget.onBackTap!();
+              } else {
+                Navigator.maybePop(context);
+              }
+            },
+          );
         }
       }
     }
@@ -320,9 +323,9 @@ class _NavigationBarState extends State<NavBar> {
     if (leading != null) {
       leading = widget.leadingConstrained
           ? ConstrainedBox(
-              constraints: const BoxConstraints.tightFor(width: _kLeadingWidth),
-              child: leading,
-            )
+        constraints: const BoxConstraints.tightFor(width: _kLeadingWidth),
+        child: leading,
+      )
           : leading;
     }
 
@@ -348,7 +351,9 @@ class _NavigationBarState extends State<NavBar> {
       actions = IconButton(
         icon: const Icon(Icons.menu),
         onPressed: _handleDrawerButtonEnd,
-        tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+        tooltip: MaterialLocalizations
+            .of(context)
+            .openAppDrawerTooltip,
       );
     }
 
@@ -395,11 +400,11 @@ class _NavigationBarState extends State<NavBar> {
           widget.bottomOpacity == 1.0
               ? widget.bottom!
               : Opacity(
-                  opacity:
-                      const Interval(0.25, 1.0, curve: Curves.fastOutSlowIn)
-                          .transform(widget.bottomOpacity),
-                  child: widget.bottom,
-                ),
+            opacity:
+            const Interval(0.25, 1.0, curve: Curves.fastOutSlowIn)
+                .transform(widget.bottomOpacity),
+            child: widget.bottom,
+          ),
         ],
       );
     }
