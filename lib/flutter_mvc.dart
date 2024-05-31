@@ -8,3 +8,5 @@ export 'src/base_page.dart';
 export 'src/base_state_page.dart';
 export 'src/base_bottom_sheet.dart';
 export 'src/state_interceptor.dart';
+export 'src/navigation_bar.dart';
+export 'src/base_state_widget.dart';
