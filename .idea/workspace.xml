@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21721208-d535-4947-80a8-9c70d3f6c745" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/icon_arrow_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/placeholder_empty_data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/placeholder_network_error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/placeholder_system_error.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/navigation_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/navigation_bar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="21721208-d535-4947-80a8-9c70d3f6c745" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

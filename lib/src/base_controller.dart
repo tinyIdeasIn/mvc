@@ -136,9 +136,9 @@ extension Route on BaseController {
   }) {
     String? route = Util.getRouteName(page.runtimeType.toString(), routeName, arguments);
     if (isReplace) {
-      return Get.off(page, routeName: route, arguments: arguments, transition: type);
+      return Get.off(page, routeName: route, arguments: arguments, transition: type, preventDuplicates: false);
     } else {
-      return Get.to(page,  routeName: route, arguments: arguments, transition: type);
+      return Get.to(page,  routeName: route, arguments: arguments, transition: type, preventDuplicates: false);
     }
   }
 
