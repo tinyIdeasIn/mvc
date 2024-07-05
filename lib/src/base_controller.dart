@@ -6,15 +6,12 @@ import 'package:get/get.dart';
 import 'base.dart';
 import 'base_model.dart';
 
-
-
 abstract class BaseController<T extends BaseModel> extends ChangeNotifier
     implements
         BaseControllerState,
         BaseControllerLifeCycle,
         BaseOverrideController<T>,
         BaseControllerCommonMethod {
-
   /// 当前页面上下文
   late BuildContext context;
 
@@ -61,7 +58,6 @@ abstract class BaseController<T extends BaseModel> extends ChangeNotifier
   @override
   void initRouteArguments() {}
 
-
   /// 隐藏键盘
   @override
   void hideKeyboard() {
@@ -78,8 +74,7 @@ abstract class BaseController<T extends BaseModel> extends ChangeNotifier
   void loadRetry() {}
 }
 
-extension Common on BaseController{
-
+extension Common on BaseController {
   /// 获取页面状态
   PageStateType get switchState {
     if (content) {
@@ -114,9 +109,7 @@ extension Common on BaseController{
   }
 }
 
-
 extension Route on BaseController {
-
   /// @title push
   /// @description 路由切换页面
   /// @param: page 页面
@@ -127,18 +120,31 @@ extension Route on BaseController {
   /// @return Future<Object?>
   /// @updateTime 2022/1/27 10:25 上午
   /// @author 10456
-  Future<dynamic>? push(Widget page, {
+  Future<dynamic>? push(
+    Widget page, {
     dynamic arguments,
     bool isReplace = false,
     Transition? type,
     bool isRemoveUntil = false,
     String? routeName,
   }) {
-    String? route = Util.getRouteName(page.runtimeType.toString(), routeName, arguments);
+    // String? route = Util.getRouteName(page.runtimeType.toString(), routeName, arguments);
     if (isReplace) {
-      return Get.off(page, routeName: route, arguments: arguments, transition: type, preventDuplicates: false);
+      return Get.off(
+        page,
+        routeName: routeName ?? page.runtimeType.toString(),
+        arguments: arguments,
+        transition: type,
+        preventDuplicates: false,
+      );
     } else {
-      return Get.to(page,  routeName: route, arguments: arguments, transition: type, preventDuplicates: false);
+      return Get.to(
+        page,
+        routeName: routeName ?? page.runtimeType.toString(),
+        arguments: arguments,
+        transition: type,
+        preventDuplicates: false,
+      );
     }
   }
 
@@ -154,9 +160,7 @@ extension Route on BaseController {
   }
 }
 
-
 extension Load on BaseController {
-
   ///隐藏加载圈
   void hideLoading() {
     if (EasyLoading.isShow) {
@@ -176,6 +180,4 @@ extension Load on BaseController {
       {EasyLoadingToastPosition position = EasyLoadingToastPosition.center}) {
     EasyLoading.showToast(message, toastPosition: position);
   }
-
 }
-
