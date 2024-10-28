@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// 网络错误
@@ -88,15 +85,10 @@ class PageStateLoad extends StatelessWidget {
   }
 
   Widget get indicator {
-    return Platform.isIOS
-        ? const CupertinoActivityIndicator(
-            animating: true,
-            radius: 12.0,
-          )
-        : const CircularProgressIndicator(
-            strokeWidth: 2.0,
-            valueColor: AlwaysStoppedAnimation(Colors.grey),
-          );
+    return const CircularProgressIndicator(
+      strokeWidth: 2.0,
+      valueColor: AlwaysStoppedAnimation(Colors.grey),
+    );
   }
 }
 

@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_mvc/src/util.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 import 'base.dart';
 import 'base_model.dart';
@@ -42,7 +41,9 @@ abstract class BaseController<T extends BaseModel> extends ChangeNotifier
 
   /// 视图渲染完成(只调用一次)
   @override
-  void widgetDidLoad() {}
+  void widgetDidLoad() {
+    initRouteArguments();
+  }
 
   /// 视图销毁
   @override
@@ -50,9 +51,7 @@ abstract class BaseController<T extends BaseModel> extends ChangeNotifier
 
   /// 页面开始加载(只调用一次)
   @override
-  void initLoad() {
-    initRouteArguments();
-  }
+  void initLoad() {}
 
   /// 初始化路由参数
   @override
@@ -98,14 +97,21 @@ extension Common on BaseController {
   /// @updateTime 2022/1/27 10:24 上午
   /// @author 10456
   T? getArgument<T>(Object key, {T? defaultValue}) {
-    final arguments = Get.arguments;
-    if (arguments == null) return defaultValue;
-    if (arguments is Map) {
-      final value = arguments[key];
-      if (value == null) return defaultValue;
-      return value;
+    try {
+      var arguments = GoRouterState.of(context).extra;
+      if(arguments == null || (arguments is Map && arguments.isEmpty)){
+        arguments = ModalRoute.of(context)?.settings.arguments;
+      }
+      if (arguments == null) return defaultValue;
+      if (arguments is Map) {
+        final value = arguments[key];
+        if (value == null) return defaultValue;
+        return value;
+      }
+      return defaultValue;
+    } catch (e) {
+      return defaultValue;
     }
-    return defaultValue;
   }
 }
 
@@ -124,26 +130,17 @@ extension Route on BaseController {
     Widget page, {
     dynamic arguments,
     bool isReplace = false,
-    Transition? type,
-    bool isRemoveUntil = false,
     String? routeName,
   }) {
-    // String? route = Util.getRouteName(page.runtimeType.toString(), routeName, arguments);
     if (isReplace) {
-      return Get.off(
-        page,
-        routeName: routeName ?? page.runtimeType.toString(),
-        arguments: arguments,
-        transition: type,
-        preventDuplicates: false,
+      return Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => page),
       );
     } else {
-      return Get.to(
-        page,
-        routeName: routeName ?? page.runtimeType.toString(),
-        arguments: arguments,
-        transition: type,
-        preventDuplicates: false,
+      return Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => page),
       );
     }
   }
@@ -156,7 +153,14 @@ extension Route on BaseController {
   /// @updateTime 2022/1/27 10:26 上午
   /// @author 10456
   void pop<T>({type, T? result}) {
-    Get.back(result: result);
+    if(type != null) {
+      final navigator = GoRouter.of(context).routerDelegate.navigatorKey.currentState;
+      navigator?.popUntil((route){
+        return route.settings.name == type;
+      });
+    } else {
+      context.pop(result);
+    }
   }
 }
 

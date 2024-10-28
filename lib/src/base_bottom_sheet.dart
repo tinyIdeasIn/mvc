@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'base_controller.dart';
 
 abstract class BaseBottomSheetDialog<T extends StatefulWidget,
-C extends BaseController> extends State<T> {
+    C extends BaseController> extends State<T> {
   late C controller;
 
   Color? get backgroundColor => Colors.grey[700];
@@ -17,7 +17,7 @@ C extends BaseController> extends State<T> {
   @override
   void initState() {
     controller.initLoad();
-    WidgetsBinding.instance!
+    WidgetsBinding.instance
         .addPostFrameCallback((_) => controller.widgetDidLoad());
     super.initState();
   }

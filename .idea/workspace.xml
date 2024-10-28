@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21721208-d535-4947-80a8-9c70d3f6c745" name="Changes" comment="" />
+    <list default="true" id="21721208-d535-4947-80a8-9c70d3f6c745" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/example/lib/page1/page1_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page1/page1_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page1/page1_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page2/page2_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page2/page2_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page2/page2_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page3/page3_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page3/page3_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page3/page3_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_state_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_state_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_state_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_state_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/state_interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/state_interceptor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +33,16 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+        <option value="BasePageState" />
+        <option value="BaseModel" />
+        <option value="BaseController" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,6 +54,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2hDFF2OFnXwhc8N7UIaroqd1CDF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,12 +69,16 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/dddd/Work/tinyIdeasIn/flutter_mvc/lib",
+    "flutter.preview.tool.window.visible": "true",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/dddd/Work/tinyIdeasIn/flutter_mvc/example/lib/page3",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example/lib/page3" />
+      <recent name="$PROJECT_DIR$/example/lib/page2" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>

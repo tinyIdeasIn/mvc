@@ -1,10 +1,4 @@
-
-
 import 'package:flutter/material.dart';
-
-// abstract class StateInterceptor implements StateInterface {
-//
-// }
 
 
 /// 页面状态视图

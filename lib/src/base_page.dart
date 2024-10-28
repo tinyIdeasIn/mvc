@@ -16,6 +16,7 @@ abstract class BasePage<T extends BaseController> extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
+
     controller.context = context;
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: style,
