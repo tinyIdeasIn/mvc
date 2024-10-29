@@ -110,6 +110,18 @@ extension Common on BaseController {
       }
       return defaultValue;
     } catch (e) {
+      try{
+        var arguments = ModalRoute.of(context)?.settings.arguments;
+        if (arguments == null) return defaultValue;
+        if (arguments is Map) {
+          final value = arguments[key];
+          if (value == null) return defaultValue;
+          return value;
+        }
+        return defaultValue;
+      } catch(e){
+        return defaultValue;
+      }
       return defaultValue;
     }
   }
