@@ -40,6 +40,9 @@ abstract class BaseController<T extends BaseModel> extends ChangeNotifier
   /// 是否加载错误
   bool isLoadError = false;
 
+  /// 避免其它地方直接调用 notifyListeners 有语法警告：The member 'notifyListeners' can only be used within instance members of subclasses of 'xxx'.
+  notify() => notifyListeners();
+
   /// 视图渲染完成(只调用一次)
   @override
   void widgetDidLoad() {}
