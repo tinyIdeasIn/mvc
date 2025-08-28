@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_mvc/src/util.dart';
-import 'package:get/get.dart';
 
 import 'base.dart';
 import 'base_model.dart';
+import 'mvc_manager.dart';
 
 abstract class BaseController<T extends BaseModel> extends ChangeNotifier
     implements
@@ -101,7 +100,9 @@ extension Common on BaseController {
   /// @updateTime 2022/1/27 10:24 上午
   /// @author 10456
   T? getArgument<T>(Object key, {T? defaultValue}) {
-    final arguments = Get.arguments;
+    print("getArgument --> ${MvcManager().arguments}");
+    final arguments = MvcManager().arguments;
+
     if (arguments == null) return defaultValue;
     if (arguments is Map) {
       final value = arguments[key];
@@ -109,57 +110,6 @@ extension Common on BaseController {
       return value;
     }
     return defaultValue;
-  }
-}
-
-extension Route on BaseController {
-  /// @title push
-  /// @description 路由切换页面
-  /// @param: page 页面
-  /// @param: arguments 参数
-  /// @param: isReplace 是否替换当前页面
-  /// @param: type 切换动画类型
-  /// @param: isRemoveUntil  是否删除当前页面
-  /// @return Future<Object?>
-  /// @updateTime 2022/1/27 10:25 上午
-  /// @author 10456
-  Future<dynamic>? push(
-    Widget page, {
-    dynamic arguments,
-    bool isReplace = false,
-    Transition? type,
-    bool isRemoveUntil = false,
-    String? routeName,
-  }) {
-    // String? route = Util.getRouteName(page.runtimeType.toString(), routeName, arguments);
-    if (isReplace) {
-      return Get.off(
-        page,
-        routeName: routeName ?? page.runtimeType.toString(),
-        arguments: arguments,
-        transition: type,
-        preventDuplicates: false,
-      );
-    } else {
-      return Get.to(
-        page,
-        routeName: routeName ?? page.runtimeType.toString(),
-        arguments: arguments,
-        transition: type,
-        preventDuplicates: false,
-      );
-    }
-  }
-
-  /// @title pop
-  /// @description 返回指定页面(默认返回上级页面)
-  /// @param: type 指定页面
-  /// @param: result 返回参数
-  /// @return void
-  /// @updateTime 2022/1/27 10:26 上午
-  /// @author 10456
-  void pop<T>({type, T? result}) {
-    Get.back(result: result);
   }
 }
 
@@ -179,8 +129,10 @@ extension Load on BaseController {
   }
 
   ///显示提示
-  void toast(String message,
-      {EasyLoadingToastPosition position = EasyLoadingToastPosition.center}) {
+  void toast(
+    String message, {
+    EasyLoadingToastPosition position = EasyLoadingToastPosition.center,
+  }) {
     EasyLoading.showToast(message, toastPosition: position);
   }
 }

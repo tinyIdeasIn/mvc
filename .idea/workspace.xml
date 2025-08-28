@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21721208-d535-4947-80a8-9c70d3f6c745" name="Changes" comment="" />
+    <list default="true" id="21721208-d535-4947-80a8-9c70d3f6c745" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/example/lib/home/home_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/home/home_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/home/home_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page1/page1_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page1/page1_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page1/page1_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page2/page2_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page2/page2_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/lib/page2/page2_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_state_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/base_state_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/mvc_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/mvc_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/state_interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/state_interceptor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +34,56 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+        <option value="BaseModel" />
+        <option value="BaseController" />
+        <option value="BasePageState" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "StanleyCocos"
+  }
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1756360417" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="10456/路由" />
+                    <option name="lastUsedInstant" value="1756360186" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/tinyIdeasIn/mvc.git",
+    "accountId": "6d29a14c-5f5b-4b6e-b242-1274cca11088"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -23,19 +91,28 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2hDFF2OFnXwhc8N7UIaroqd1CDF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/dddd/Work/tinyIdeasIn/flutter_mvc/lib",
+    "flutter.view.tool.window.visible": "true",
+    "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/dddd/Work/StanleyCocos/tinyIdeasIn/mvc",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>

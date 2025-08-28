@@ -17,7 +17,7 @@ C extends BaseController> extends State<T> {
   @override
   void initState() {
     controller.initLoad();
-    WidgetsBinding.instance!
+    WidgetsBinding.instance
         .addPostFrameCallback((_) => controller.widgetDidLoad());
     super.initState();
   }

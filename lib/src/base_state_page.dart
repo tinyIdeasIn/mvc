@@ -32,21 +32,6 @@ abstract class BasePageState<T extends StatefulWidget, C extends BaseController>
 
   /// 渲染视图
   Widget get renderLayout {
-    // return ChangeNotifierProvider.value(
-    //   value: controller,
-    //   child: GestureDetector(
-    //     onTap: controller.onScreenClick,
-    //     child: Scaffold(
-    //       backgroundColor: backgroundColor,
-    //       extendBodyBehindAppBar: extendBodyBehindAppBar,
-    //       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-    //       appBar: navigation as PreferredSizeWidget?,
-    //       bottomNavigationBar: bottomNavigation,
-    //       body: body,
-    //     ),
-    //   ),
-    // );
-
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: style,
       child: ChangeNotifierProvider.value(
