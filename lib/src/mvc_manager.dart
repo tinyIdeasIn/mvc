@@ -19,7 +19,6 @@ class MvcManager {
     Map<String, dynamic>? routeMaps,
     dynamic Function()? arguments,
   }) {
-    print("MvcManager.init --> $arguments");
     _interceptor = interceptor;
     _routeMaps = routeMaps;
     _arguments = arguments;

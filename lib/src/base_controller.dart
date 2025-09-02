@@ -100,7 +100,6 @@ extension Common on BaseController {
   /// @updateTime 2022/1/27 10:24 上午
   /// @author 10456
   T? getArgument<T>(Object key, {T? defaultValue}) {
-    print("getArgument --> ${MvcManager().arguments}");
     final arguments = MvcManager().arguments;
 
     if (arguments == null) return defaultValue;
